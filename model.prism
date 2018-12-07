@@ -15,12 +15,12 @@ ss3_4: [0..2] init 2;
 [fail7] (ss3_4=1 & ss17_20=2) -> 18*diskfr:(ss17_20'=1) + 3*dcfr:(ss3_4'=0);
 [fail8] (ss3_4=1 & ss17_20=1) -> 17*diskfr:(ss17_20'=0) + 3*dcfr:(ss3_4'=0);
 [fail9] (ss3_4>0 & ss17_20>0) -> 1*dcfr:(ss17_20'=0);
-[repair1] (ss3_4=2 & ss17_20=1) -> 3*diskfr:(ss17_20'=2);
-[repair2] (ss3_4=2 & ss17_20=2) -> 2*diskfr:(ss17_20'=3);
-[repair3] (ss3_4=2 & ss17_20=3) -> 1*diskfr:(ss17_20'=4);
-[repair4] (ss3_4=1 & ss17_20=1) -> 3*diskfr:(ss17_20'=2) + 1*dcrr:(ss3_4'=2);
-[repair5] (ss3_4=1 & ss17_20=2) -> 2*diskfr:(ss17_20'=3) + 1*dcrr:(ss3_4'=2);
-[repair6] (ss3_4=1 & ss17_20=3) -> 1*diskfr:(ss17_20'=4) + 1*dcrr:(ss3_4'=2);
+[repair1] (ss3_4=2 & ss17_20=1) -> 3*diskrr:(ss17_20'=2);
+[repair2] (ss3_4=2 & ss17_20=2) -> 2*diskrr:(ss17_20'=3);
+[repair3] (ss3_4=2 & ss17_20=3) -> 1*diskrr:(ss17_20'=4);
+[repair4] (ss3_4=1 & ss17_20=1) -> 3*diskrr:(ss17_20'=2) + 1*dcrr:(ss3_4'=2);
+[repair5] (ss3_4=1 & ss17_20=2) -> 2*diskrr:(ss17_20'=3) + 1*dcrr:(ss3_4'=2);
+[repair6] (ss3_4=1 & ss17_20=3) -> 1*diskrr:(ss17_20'=4) + 1*dcrr:(ss3_4'=2);
 [repair7] (ss3_4=1 & ss17_20=4) -> 1*dcrr:(ss3_4'=2);
 endmodule
 
